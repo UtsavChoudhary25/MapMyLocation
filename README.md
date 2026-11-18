@@ -1,68 +1,66 @@
-# MapMyLocation — Premium Weather-Based Route & Music Android Application
+# 🗺️ MapMyLocation
 
-**MapMyLocation** is an aesthetically pleasing, modern Android application built using Kotlin and Jetpack Compose. It seamlessly combines real-time location services, interactive Google Maps routing, OpenWeatherMap forecasting, and an intelligent weather-to-music recommendation engine powered by AndroidX Media3 ExoPlayer.
+> **Premium Weather-Based Route & Music Android Application**
+
+![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-7F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4.svg?style=for-the-badge&logo=android&logoColor=white)
+![Google Maps](https://img.shields.io/badge/Google%20Maps-SDK%20%26%20Compose-4285F4.svg?style=for-the-badge&logo=google-maps&logoColor=white)
+![OpenWeather](https://img.shields.io/badge/OpenWeather-API-EB6E4B.svg?style=for-the-badge&logo=openweathermap&logoColor=white)
+![ExoPlayer](https://img.shields.io/badge/AndroidX-Media3%20ExoPlayer-3DDC84.svg?style=for-the-badge&logo=android&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-Clean%20MVVM-009688.svg?style=for-the-badge)
+
+**MapMyLocation** is an aesthetically pleasing, modern Android application built with Kotlin and Jetpack Compose. Designed as a commercial-grade travel companion, it seamlessly integrates real-time location tracking, interactive Google Maps navigation, OpenWeatherMap forecasting, and a rule-based **Weather-to-Music Recommendation Engine** powered by AndroidX Media3 ExoPlayer.
 
 ---
 
-## 🌟 Visual & Architectural Highlights
+## 🎨 Design System
 
-- **Design System:** Inspired by Apple Maps, Google Maps, and Spotify. Built with a warm ivory background (`#F7F5EF`), deep forest green primary accents (`#244C3A`), sage green secondary tones (`#A9BBA7`), terracotta accents (`#C98265`), clean charcoal typography (`#252923`), and crisp card boundaries (`#E8E6DE`).
-- **Architecture:** Clean MVVM (Model-View-ViewModel) architecture using Kotlin Coroutines, StateFlow, and Navigation Compose.
-- **Offline & Fallback Resilience:** Smart fallback mechanisms for Google Directions and OpenWeather APIs ensure that the interactive map, polylines, distance metrics, weather details, and music recommendations function seamlessly offline or without live API keys.
+MapMyLocation follows a warm, minimalist travel design language inspired by **Apple Maps**, **Google Maps**, and **Spotify**:
+
+- 🍦 **Background:** Warm Ivory (`#F7F5EF`)
+- 🌲 **Primary Actions:** Forest Green (`#244C3A`)
+- 🌿 **Secondary Elements:** Sage Green (`#A9BBA7` / `#E2E9E1`)
+- 🧱 **Accents:** Terracotta (`#C98265`)
+- ✒️ **Typography:** Charcoal Text (`#252923`) & Muted Gray (`#85877F`)
+- ⬜ **Cards & Borders:** Clean Card White (`#FFFFFF`) with subtle border contours (`#E8E6DE`)
 
 ---
 
-## 🚀 Core Features
+## 🚀 Key Features
 
-### 1. Dashboard (Home Screen)
-- **Header:** Live greeting ("Good morning / afternoon / evening"), current city indicator, branding, and quick settings menu.
-- **Destination Search:** Interactive search bar with instant query clearance and a "Use my current location" quick action.
-- **Weather Overview:** Real-time temperature (°C or °F), condition, weather category badge, city, humidity percentage, and wind speed.
-- **Active Journey Summary:** Real-time distance and travel duration summary when a route is active.
-- **Smart Music Recommendation:** Dynamic weather-matched soundtrack recommendation with album art and functional play/pause control.
+### 1. 🏠 Smart Dashboard (Home Screen)
+- **Dynamic Header:** Greeting based on time of day, current city detector, branding, and instant settings modal.
+- **Destination Search:** Instant location search field with query clearing and single-tap *"Use my current location"*.
+- **Live Weather Summary:** Temperature in °C or °F, weather condition badges, city, humidity percentage, and wind speed.
+- **Journey Tracker:** Active distance and travel duration summary when a route is planned.
+- **Soundtrack Preview:** Weather-matched music track recommendation with album artwork and functional play/pause control.
 
-### 2. Interactive Navigation (Explore Screen)
-- **Google Maps Integration:** Google Maps Compose with custom markers for origin and destination.
-- **Forest Green Route Polyline:** Smooth, high-precision polyline rendering for travel routes.
-- **Automatic Camera Animation:** Smooth map camera bounds framing origin and destination coordinates.
-- **Floating Route Sheet:** Bottom sheet detailing travel distance, estimated duration, destination weather, and actions to "View Route" or "Clear Route".
+### 2. 🗺️ Interactive Maps & Navigation (Explore Screen)
+- **Google Maps Compose Integration:** Smooth map view with custom markers for origin and destination.
+- **Forest Green Polyline:** Custom-styled route polyline connecting travel origin and destination.
+- **Auto-Camera Framing:** Automatic camera animation to smoothly fit origin and destination bounds.
+- **Floating Route Sheet:** Bottom sheet displaying starting location, destination, distance, duration, destination weather, *"Start Journey"*, and *"Clear Route"*.
 
-### 3. Weather-Based Music Engine & Player (Music Screen)
+### 3. 🎵 Weather-Based Music Engine & Player (Music Screen)
 - **Rule-Based Recommendation Engine:**
-  - **SUNNY:** Energetic upbeat instrumental tracks (*Golden Hour Journey*, *Sunlit Highway*).
-  - **RAINY:** Lo-Fi beats, soft piano & relaxing ambient tracks (*Raindrops on Glass*, *Cozy Shelter*).
-  - **CLOUDY:** Acoustic chill instrumental melodies (*Cloud Drift*).
-  - **SNOWY:** Peaceful solo piano & winter harmonies (*Winter Piano Reverie*).
-  - **OTHER:** Neutral atmospheric instrumentals (*Misty Valley*).
-- **Full-Featured Audio Player:** Powered by **AndroidX Media3 ExoPlayer**.
-- **Playback Controls:** Previous, Play, Pause, Resume, Next/Skip, Stop, and seek slider.
-- **Playlist Management:** Interactive playlist displaying all weather-curated tracks.
-- **Auto Music Toggle:** Toggle automatic playlist synchronization when weather or destination changes.
+  | Weather Condition | Playlist Vibe | Track Titles |
+  | :--- | :--- | :--- |
+  | **SUNNY** ☀️ | Energetic Upbeat Instrumental | *Golden Hour Journey*, *Sunlit Highway* |
+  | **RAINY** 🌧️ | Lo-Fi Beats & Soft Piano | *Raindrops on Glass*, *Cozy Shelter* |
+  | **CLOUDY** ⛅ | Acoustic Chill Instrumental | *Cloud Drift* |
+  | **SNOWY** ❄️ | Peaceful Piano & Winter Melodies | *Winter Piano Reverie* |
+  | **OTHER** 🌫️ | Atmospheric Ambient Instrumental | *Misty Valley* |
+- **Full Media3 ExoPlayer Player:** Functional Previous, Play, Pause, Resume, Next/Skip, Stop, and seek progress slider.
+- **Playlist Management:** Interactive track selection menu and Auto-Music switch.
 
-### 4. Application Settings
-- Temperature unit selection (°C / °F).
-- Auto Music recommendation toggle.
-- Location service status.
-- Application metadata and version information.
-
----
-
-## 🛠️ Technology Stack
-
-| Layer | Technology |
-| :--- | :--- |
-| **Language** | Kotlin |
-| **UI Framework** | Jetpack Compose + Material 3 |
-| **Maps & Location** | Google Maps SDK for Android, Google Maps Compose, Fused Location Provider Client |
-| **Networking** | Retrofit 2, OkHttp 4, Gson |
-| **Audio Engine** | AndroidX Media3 ExoPlayer (`media3-exoplayer`, `media3-ui`, `media3-session`) |
-| **Asynchronous Logic** | Kotlin Coroutines & StateFlow |
-| **Navigation** | Navigation Compose |
-| **Architecture** | Clean MVVM |
+### 4. ⚙️ App Settings
+- Temperature unit preference (°C / °F).
+- Auto-Music playlist switch.
+- Location service diagnostic indicator.
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Technology Stack & Architecture
 
 ```
 com.example.mapmylocation
@@ -71,9 +69,9 @@ com.example.mapmylocation
 │   ├── network/          # OpenWeatherApi, GoogleDirectionsApi, RetrofitClient
 │   └── repository/       # WeatherRepository, DirectionsRepository, MusicRepository
 ├── location/             # LocationManager (FusedLocationProviderClient wrapper)
-├── player/               # AudioPlayerManager (AndroidX Media3 ExoPlayer integration)
+├── player/               # AudioPlayerManager (AndroidX Media3 ExoPlayer engine)
 ├── ui/
-│   ├── components/       # BottomNavBar, DestinationSearchBar, WeatherCard, MusicRecommendationCard, RouteSummarySheet
+│   ├── components/       # MapBottomNavBar, DestinationSearchBar, WeatherCard, MusicRecommendationCard, RouteSummarySheet
 │   ├── screens/          # HomeScreen, ExploreScreen, MusicScreen, SettingsScreen
 │   └── theme/            # Color, Type, Theme
 ├── utils/                # Constants, PolylineUtils
@@ -82,47 +80,38 @@ com.example.mapmylocation
 
 ---
 
-## 🔑 API Configuration Setup
+## 🔑 API Setup & Configuration
 
-### 1. Google Maps API Key
-1. Obtain an API key from the [Google Cloud Console](https://console.cloud.google.com/) with **Maps SDK for Android** and **Directions API** enabled.
-2. Add your key to `local.properties`:
+1. **Google Maps SDK & Directions API:**
+   Set your API key in `local.properties`:
    ```properties
-   MAPS_API_KEY=YOUR_ACTUAL_GOOGLE_MAPS_KEY
+   MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
    ```
-3. Or update `app/src/main/AndroidManifest.xml`:
+   Or in `app/src/main/AndroidManifest.xml`:
    ```xml
    <meta-data
        android:name="com.google.android.geo.API_KEY"
-       android:value="YOUR_ACTUAL_GOOGLE_MAPS_KEY" />
+       android:value="YOUR_GOOGLE_MAPS_API_KEY" />
    ```
 
-### 2. OpenWeatherMap API Key
-1. Sign up at [OpenWeatherMap](https://openweathermap.org/api) and generate an API key.
-2. Set `OPENWEATHER_API_KEY` in `com.example.mapmylocation.utils.Constants.kt`.
+2. **OpenWeatherMap API:**
+   Set your API key in `com.example.mapmylocation.utils.Constants.kt`:
+   ```kotlin
+   var OPENWEATHER_API_KEY = "YOUR_OPENWEATHER_API_KEY"
+   ```
 
-*Note: The app includes intelligent fallback simulations for both Weather and Directions APIs so all features run smoothly out of the box even without live API keys.*
-
----
-
-## 🎵 Audio Resources Setup
-
-Local audio files are located in `app/src/main/res/raw/`:
-- `sunny_track_1.wav`
-- `sunny_track_2.wav`
-- `rainy_track_1.wav`
-- `rainy_track_2.wav`
-- `cloudy_track_1.wav`
-- `snowy_track_1.wav`
-- `other_track_1.wav`
-
-To add custom tracks, place `.mp3` or `.wav` files into `res/raw/` and update `com.example.mapmylocation.data.repository.MusicRepository.kt`.
+*Note: The app includes intelligent fallback simulations for both Weather and Directions APIs so all features run smoothly out-of-the-box even without live API keys.*
 
 ---
 
-## 🏃 Building and Running the Application
+## 🏃 Building and Running
 
-1. Open **Android Studio**.
+1. Open **Android Studio** (2024.1+ / Ladybug or newer).
 2. Select **File -> Open** and navigate to `Mapmylocation2`.
 3. Wait for Gradle Sync to complete.
-4. Run the application on an Android Emulator or connected physical device (Android 7.0 / API 24+).
+4. Run the project on an Android Emulator or connected device (Android 7.0 / API 24+).
+
+---
+
+## 📄 License
+This project is open-source and available under the [MIT License](LICENSE).
